@@ -19,7 +19,7 @@ env:
 jobs:
   exporter-build:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 35
     name: Build Image for kube-events-exporter
     steps:
       - name: Checkout code
