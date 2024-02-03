@@ -14,7 +14,7 @@ on:
       - "Makefile"
 
 env:
-  REPO_OPERATOR: 'kubesphere'
+  REPO_OPERATOR: 'ghcr.io/kubenoops'
 
 jobs:
   operator-build:
@@ -40,6 +40,7 @@ jobs:
       - name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
+          registry: ghcr.io 
           username: ${{ secrets.REGISTRY_USER }}
           password: ${{ secrets.REGISTRY_PASSWORD }}
 
